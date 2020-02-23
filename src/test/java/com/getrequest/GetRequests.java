@@ -158,8 +158,7 @@ public class GetRequests extends CommonUtils {
 			if (response.jsonPath().getList("orders").size() > 0) {
 
 				System.out.println(response.getBody().prettyPrint());
-				System.out.println(path.get("orders[0].order_url"));
-				order_id = path.get("orders[0].order_url").toString()
+							order_id = path.get("orders[0].order_url").toString()
 						.substring(path.get("orders[0].order_url").toString().lastIndexOf("/") + 1);
 			} else {
 				throw new Exception("No Order details found on the system");
